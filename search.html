@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/search.css">
+    <link rel="stylesheet" href="./CSS/header.css">
+    <link rel="stylesheet" href="./CSS/footer.css">
+    <!-- link icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- link font chữ -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- link bootstrap -->
+    <link rel="stylesheet" type="text/css" href="./lib/css/bootstrap.min.css">
+    <title>Search</title>
+</head>
+
+<body>
+    <header class="my-header">
+        <div class="container respHeader">
+            <div class="row align-items-center">
+                <div class="col-5 col-sm-4 col-lg-3">
+                    <a href="./index.html"><img class="w-100" src="./Assets/logo/logo.png" alt=""></a>
+    
+                </div>
+                <div class=" header__content col-7 col-lg-8 d-flex align-items-center  ml-auto">
+                    <input id="checkboxMenu" class="checkboxMenu d-none" type="checkbox">
+                    <ul class="header__nav mb-0 ">
+                        <li><a class="px-0 px-lg-2  px-xl-3" href="./index.html">HOME</a></li>
+                        <li class=" link-product"><a class=" px-0 px-lg-4  px-xl-5" href="./product.html">PRODUCTS</a></li>
+                        <li><a class="px-0 px-lg-2  px-xl-3" href="./cart.html">CART</a></li>
+                    </ul>
+                    <div class="header__search d-flex align-items-center px-3 px-lg-2 px-xl-3 ">
+                        <a href="./search.html" class="pr-3 pr-xl-5 header__search-text">SEARCH</a>
+                        <a href="./search.html" class="material-icons icon-search">
+                            search
+                        </a>
+                    </div>
+                    <label for="checkboxMenu" class="d-block d-lg-none mb-0 ">
+                        <span class="material-icons header__hamburger">
+                            menu
+                        </span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="container">
+                <div class="sw">
+                    <input type="" class="search" id="userInputFilterByName" placeholder="SEARCH" />
+
+                    <span onclick="closeInput()" class="material-icons icon-close">
+                        close
+                    </span>
+
+                    <button class="go" onclick="renderBySearch()">
+                        <i class="material-icons" id="searchIcon">
+                            search
+                        </i>
+                    </button>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3 text_researcher">
+            <p class="text_recent">Recent Search</p>
+            <div style="height: 200px"></div>
+        </div>
+        <div class="row">
+            <div class="reseutlS">
+
+            </div>
+        </div>
+
+        <div class="notFound">
+            <p>No product finds any of your choice</p>
+        </div>
+
+        <div class="row">
+            <div id="showProducts" class="container">
+
+            </div>
+        </div>
+        <div class="row mt-3 text_suggestions">
+            <p class="text_suggest">Suggestions</p>
+            <a href="detail.html"><span>Leather Strap - 27mm (RA-KAO0002Y)</span></a>
+            <a href="detail.html"><span>Leather Strap - 32mm (RA-AP0004S)</span></a>
+            <a href="detail.html"><span>Leather Strap - 40.8mm (RA-AP0004S)</span></a>
+            <a href="detail.html"><span>Metal Strap - 32.5mm (RA-KAO0002Y)</span></a>
+        </div>
+    </div>
+
+    <footer class="my-footer pt-3 pt-md-4 pt-xl-5">
+        <div class="container footer_res pb-3">
+            <div class="row ">
+                <div class="col-5 col-sm-3 px-0 px-sm-3">
+                    <img class="w-100" src="./Assets/logo/logo.png" alt="">
+                </div>
+                <div class="col-6  col-sm-9 col-md-8 col-lg-7 d-flex justify-content-around align-items-center ml-auto ">
+                    <div class="footer__contact ">
+                        <h6>Customer care support</h6>
+                        <p class="d-flex justify-content-between align-items-center my-1 my-md-2 my-lg-4">
+                            <i class="material-icons">
+                                email
+                            </i>
+                            <a class="text-white">Chronos@bit.vn</a>
+                        </p>
+                        <p class="d-flex justify-content-between align-items-center">
+                            <i class="material-icons">
+                                call
+                            </i>
+                            <a>+84 68 790 812</a>
+                        </p>
+    
+                    </div>
+                    <div class="footer__btn d-none d-sm-block">
+                        <button class="btn  d-block footer__btn-singIn">
+                            Sign in
+                        </button>
+                        <button class="btn  d-block footer__btn-singUp">
+                            Sign up
+                        </button>
+                    </div>
+                </div>
+    
+                <div class="col-10 mx-auto mt-3 d-block d-sm-none">                 
+                    <div class="footer__btn  ">
+                        <button class="btn footer__btn-singIn mb-2 mr-2 ">
+                            Sign in
+                        </button>
+                        <button class="btn footer__btn-singUp mb-2 ">
+                            Sign up
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom py-3 py-md-4 py-xl-5">
+            <div class="container d-flex justify-content-between align-items-center ">
+                <div>
+                    <span>© Photo, Inc. 2021. From group 2 with love!</span>
+                </div>
+                <div class="">
+                    <a class="text-white" href="">Terms of Use </a>
+                    <a class="text-white" href=""> Privacy Policy </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./JS/search.js"></script>
+    <script src="./JS/include.js"></script>
+    <script src="./lib/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
